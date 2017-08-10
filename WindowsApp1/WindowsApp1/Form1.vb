@@ -17,6 +17,27 @@
         If e.KeyChar = "A" Then
             P1Left = True
         End If
+        If e.KeyChar = "D" Then
+            P1Right = True
+        End If
+        If e.KeyChar = "W" Then
+            P1Up = True
+        End If
+        If e.KeyChar = "S" Then
+            P1Down = True
+        End If
+        If e.KeyChar = "1" Then
+            P2Left = True
+        End If
+        If e.KeyChar = "3" Then
+            P2Right = True
+        End If
+        If e.KeyChar = "5" Then
+            P2Up = True
+        End If
+        If e.KeyChar = "2" Then
+            P2Down = True
+        End If
     End Sub
 
     Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles Me.KeyUp
