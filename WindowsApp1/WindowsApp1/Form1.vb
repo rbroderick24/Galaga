@@ -50,7 +50,30 @@
         End If
     End Sub
 
-    Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
-
+    Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles Me.KeyUp
+        If e.KeyChar = "A" Then
+            P1Left = False
+        End If
+        If e.KeyChar = "D" Then
+            P1Right = False
+        End If
+        If e.KeyChar = "W" Then
+            P1Up = False
+        End If
+        If e.KeyChar = "S" Then
+            P1Down = False
+        End If
+        If e.KeyChar = "1" Then
+            P2Left = False
+        End If
+        If e.KeyChar = "3" Then
+            P2Right = False
+        End If
+        If e.KeyChar = "5" Then
+            P2Up = False
+        End If
+        If e.KeyChar = "2" Then
+            P2Down = False
+        End If
     End Sub
 End Class
