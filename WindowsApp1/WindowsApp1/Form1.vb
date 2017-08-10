@@ -1,4 +1,6 @@
 ﻿Public Class Form1
+    Dim shooting As Boolean = False
+    Dim bullet As New Pen(Color.Red, 3)
     Dim P1Left As Boolean = False
     Dim P1Right As Boolean = False
     Dim P1Up As Boolean = False
@@ -10,7 +12,7 @@
     Dim P1Position As New Point(390, 800)
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Dim bullet As New Pen(Color.Red, 3)
+
     End Sub
 
     Private Sub Form1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
@@ -38,9 +40,17 @@
         If e.KeyChar = "2" Then
             P2Down = True
         End If
+
+        If e.KeyChar = "0" Then
+            shooting = True
+            If shooting = True Then
+
+            End If
+
+        End If
     End Sub
 
-    Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles Me.KeyUp
+    Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
 
     End Sub
 End Class
