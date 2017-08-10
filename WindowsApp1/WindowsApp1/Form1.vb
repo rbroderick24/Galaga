@@ -1,5 +1,5 @@
 ﻿Public Class Form1
-    Dim draw As System.Drawing.Graphics
+    Dim draw As System.Drawing.Graphics = Me.CreateGraphics
     Dim shooting As Boolean = False
     Dim bullet As New Pen(Color.Red, 3)
     Dim P1Left As Boolean = False
