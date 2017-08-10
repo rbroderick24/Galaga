@@ -1,4 +1,5 @@
 ﻿Public Class Form1
+    Dim draw As System.Drawing.Graphics
     Dim shooting As Boolean = False
     Dim bullet As New Pen(Color.Red, 3)
     Dim P1Left As Boolean = False
@@ -22,6 +23,7 @@
         If e.KeyChar = "0" Then
             shooting = True
             If shooting = True Then
+                draw.DrawLine(bullet, 10, 10, 10, 10)
 
             End If
 
