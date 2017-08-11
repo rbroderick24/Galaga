@@ -46,16 +46,15 @@
             shooting = True
             If shooting = True Then
 
-<<<<<<< HEAD
+
                 draw.DrawLine(bullet, 300, 100, 50, 50)
 
 
 
-=======
+
                 draw.DrawLine(bullet, 50, 100, 50, 50)
 
                 draw.DrawLine(bullet, 20000, 20000, 100, 100)
->>>>>>> 81ec5a499b3089b55128f853b31672205a0227b8
 
 
 
@@ -63,10 +62,7 @@
 
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 81ec5a499b3089b55128f853b31672205a0227b8
 
                 If e.KeyCode = 32 Then
                     shooting = True
@@ -89,7 +85,7 @@
     End Sub
 
 
-<<<<<<< HEAD
+
     'Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles Me.KeyUp
     'If e.KeyChar = "A" Then
     '    P1Left = False
@@ -117,9 +113,7 @@
     'End If
 
     'End Sub
-=======
 
->>>>>>> 81ec5a499b3089b55128f853b31672205a0227b8
 
     Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles Me.KeyUp
         If e.KeyCode = 65 Then
@@ -148,8 +142,4 @@
         End If
     End Sub
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 81ec5a499b3089b55128f853b31672205a0227b8
 End Class
