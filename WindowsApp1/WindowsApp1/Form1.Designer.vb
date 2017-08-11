@@ -24,14 +24,18 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+<<<<<<< HEAD
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+=======
+>>>>>>> d273d8540d22a29e5e1b17ce3ae27143fe629b23
         Me.SuspendLayout()
         '
         'Timer1
         '
         '
+<<<<<<< HEAD
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -50,6 +54,8 @@ Partial Class Form1
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Label2"
         '
+=======
+>>>>>>> d273d8540d22a29e5e1b17ce3ae27143fe629b23
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -65,7 +71,10 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents Timer1 As Timer
+<<<<<<< HEAD
     Friend WithEvents Timer2 As Timer
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+=======
+>>>>>>> d273d8540d22a29e5e1b17ce3ae27143fe629b23
 End Class
