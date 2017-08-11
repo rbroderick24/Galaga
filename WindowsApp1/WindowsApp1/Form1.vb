@@ -129,18 +129,39 @@
             End If
         Next
 
-        If P1Left Then
-            P1Position.X -= 10
+        If P1Left And
+            P1Position.X >= 5 Then
+            P1Position.X -= 5
         End If
-        If P1Right Then
-            P1Position.X += 10
+        If P1Right And
+            P1Position.X <= 775 Then
+            P1Position.X += 5
         End If
 
-        If P2Left Then
-            P2Position.X -= 10
+        If P1Up And
+            P1Position.Y >= 650 Then
+            P1Position.Y -= 5
         End If
-        If P2Right Then
-            P2Position.X += 10
+        If P1Down And
+            P1Position.Y <= 845 Then
+            P1Position.Y += 5
+        End If
+
+        If P2Left And
+            P2Position.X >= 5 Then
+            P2Position.X -= 5
+        End If
+        If P2Right And
+            P2Position.X <= 775 Then
+            P2Position.X += 5
+        End If
+        If P2Down And
+            P2Position.Y <= 200 Then
+            P2Position.Y += 5
+        End If
+        If P2Up And
+            P2Position.Y >= 5 Then
+            P2Position.Y += 5
         End If
     End Sub
 End Class
