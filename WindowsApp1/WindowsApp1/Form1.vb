@@ -1,5 +1,5 @@
 ﻿Public Class Form1
-    Dim draw As System.Drawing.Graphics = Me.CreateGraphics
+
     Dim shooting As Boolean = False
     Dim bullet As New Pen(Color.Red, 3)
     Dim bullet2 As New Pen(Color.Blue, 3)
@@ -12,11 +12,13 @@
     Dim P2Up As Boolean = False
     Dim P2Down As Boolean = False
     Dim P1Position As New Point(390, 800)
+    Dim P2Position As New Point(390, 50)
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
     End Sub
     Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        Dim draw As System.Drawing.Graphics = Me.CreateGraphics
         If e.KeyCode = 65 Then
             P1Left = True
         End If
@@ -47,21 +49,12 @@
             If shooting = True Then
                 draw.DrawLine(bullet, 20000, 20000, 100, 100)
 
-
-
-
-
-
-
-
                 If e.KeyCode = 32 Then
                     shooting = True
                     If shooting = True Then
                         draw.DrawLine(bullet2, 10, 10, 10, 10)
 
-
                     End If
-
                 End If
             End If
         End If
@@ -92,5 +85,15 @@
         If e.KeyCode = 50 Then
             P2Down = False
         End If
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Dim point1 As New Point(P1Position.X - 50, 800)
+        Dim point2 As New Point(P1Position.X + 50, 800)
+        Dim point3 As New Point(P1Position.X, P1Position.Y - 25)
+        Dim draw As System.Drawing.Graphics = Me.CreateGraphics
+        Dim allP As Point() = {point1, point2, point3}
+        Dim redBrush As New SolidBrush(Color.Red)
+        draw.FillPolygon(redBrush, allP)
     End Sub
 End Class
