@@ -1,5 +1,5 @@
 ﻿Public Class Form1
-    Dim draw As System.Drawing.Graphics = Me.CreateGraphics
+
     Dim shooting As Boolean = False
     Dim bullet As New Pen(Color.Red, 3)
     Dim bullet2 As New Pen(Color.Blue, 3)
@@ -12,11 +12,12 @@
     Dim P2Up As Boolean = False
     Dim P2Down As Boolean = False
     Dim P1Position As New Point(390, 800)
+    Dim P2Position As New Point(390, 50)
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
 
     End Sub
     Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        Dim draw As System.Drawing.Graphics = Me.CreateGraphics
         If e.KeyCode = 65 Then
             P1Left = True
         End If
@@ -46,11 +47,7 @@
             shooting = True
             If shooting = True Then
 
-
                 draw.DrawLine(bullet, 300, 100, 50, 50)
-
-
-
 
                 draw.DrawLine(bullet, 50, 100, 50, 50)
 
@@ -61,14 +58,13 @@
                     If shooting = True Then
                         draw.DrawLine(bullet2, 10, 10, 10, 10)
 
-
                     End If
-
                 End If
             End If
         End If
     End Sub
 
+<<<<<<< HEAD
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Label1.Text = MousePosition.X
@@ -108,6 +104,8 @@
 
 
 
+=======
+>>>>>>> c6552ed5dc94b6b652cdbee1aef8270cdb92deca
     Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles Me.KeyUp
         If e.KeyCode = 65 Then
             P1Left = False
@@ -134,4 +132,20 @@
             P2Down = False
         End If
     End Sub
+<<<<<<< HEAD
+=======
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs)
+        Dim point1 As New Point(P1Position.X - 50, 800)
+        Dim point2 As New Point(P1Position.X + 50, 800)
+        Dim point3 As New Point(P1Position.X, P1Position.Y - 25)
+        Dim draw As System.Drawing.Graphics = Me.CreateGraphics
+        Dim allP As Point() = {point1, point2, point3}
+        Dim redBrush As New SolidBrush(Color.Red)
+        draw.FillPolygon(redBrush, allP)
+
+        Label1.Text = MousePosition.X
+        Label2.Text = MousePosition.Y
+    End Sub
+>>>>>>> c6552ed5dc94b6b652cdbee1aef8270cdb92deca
 End Class
