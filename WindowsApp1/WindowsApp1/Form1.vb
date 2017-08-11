@@ -53,56 +53,19 @@
 
                 draw.DrawLine(bullet, 20000, 20000, 100, 100)
 
-                If e.KeyCode = 32 Then
-                    shooting = True
-                    If shooting = True Then
-                        draw.DrawLine(bullet2, 10, 10, 10, 10)
 
-                    End If
-                End If
             End If
         End If
+
+        If e.KeyCode = 32 Then
+            shooting = True
+            If shooting = True Then
+                draw.DrawLine(bullet2, 10, 10, 10, 10)
+
+            End If
+        End If
+
     End Sub
-
-
-
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Label1.Text = MousePosition.X
-        Label2.Text = MousePosition.Y
-
-    End Sub
-
-
-
-    'Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles Me.KeyUp
-    'If e.KeyChar = "A" Then
-    '    P1Left = False
-    'End If
-    'If e.KeyChar = "D" Then
-    '    P1Right = False
-    'End If
-    'If e.KeyChar = "W" Then
-    '    P1Up = False
-    'End If
-    'If e.KeyChar = "S" Then
-    '    P1Down = False
-    'End If
-    'If e.KeyChar = "1" Then
-    '    P2Left = False
-    'End If
-    'If e.KeyChar = "3" Then
-    '    P2Right = False
-    'End If
-    'If e.KeyChar = "5" Then
-    '    P2Up = False
-    'End If
-    'If e.KeyChar = "2" Then
-    '    P2Down = False
-    'End If
-
-    'End Sub
-
-
     Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles Me.KeyUp
         If e.KeyCode = 65 Then
             P1Left = False
@@ -129,19 +92,15 @@
             P2Down = False
         End If
     End Sub
-
-<<<<<<< HEAD
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-=======
-
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs)
->>>>>>> 7a2d408fced887dc7de439d9c1a6e7355f578270
         Dim point1 As New Point(P1Position.X - 50, 800)
         Dim point2 As New Point(P1Position.X + 50, 800)
         Dim point3 As New Point(P1Position.X, P1Position.Y - 25)
         Dim point4 As New Point(P2Position.X - 50, 50)
         Dim point5 As New Point(P2Position.X + 50, 50)
         Dim point6 As New Point(P2Position.X, P2Position.Y + 25)
+
+        Dim P1Bullets() As Point = {New Point(0, 0), New Point(0, 0), New Point(0, 0)}
 
         Dim draw As System.Drawing.Graphics = Me.CreateGraphics
         Dim allP As Point() = {point1, point2, point3}
@@ -152,6 +111,23 @@
         draw.FillRectangle(Brushes.Black, 0, 0, 780, 850)
         draw.FillPolygon(redBrush, allP)
         draw.FillPolygon(blueBrush, allP2)
+
+        If shooting Then
+            For i As Integer = 0 To P1Bullets.Length - 1
+                If P1Bullets(i) = New Point(0, 0) Then
+                    P1Bullets(i) = New Point(P1Position.X, P1Position.Y - 25)
+                End If
+            Next
+        End If
+
+
+        For i As Integer = 0 To P1Bullets.Length - 1
+            If P1Bullets(i) <> New Point(0, 0) Then
+                MsgBox("moving bullet")
+                P1Bullets(i).Y -= 10
+                draw.FillRectangle(redBrush, P1Bullets(i).X, P1Bullets(i).Y, 5, 20)
+            End If
+        Next
 
         If P1Left Then
             P1Position.X -= 10
