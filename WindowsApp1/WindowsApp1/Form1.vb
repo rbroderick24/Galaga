@@ -96,11 +96,11 @@
         End If
     End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Dim point1 As New Point(P1Position.X - 50, 800)
-        Dim point2 As New Point(P1Position.X + 50, 800)
+        Dim point1 As New Point(P1Position.X - 50, P1Position.Y)
+        Dim point2 As New Point(P1Position.X + 50, P1Position.Y)
         Dim point3 As New Point(P1Position.X, P1Position.Y - 25)
-        Dim point4 As New Point(P2Position.X - 50, 50)
-        Dim point5 As New Point(P2Position.X + 50, 50)
+        Dim point4 As New Point(P2Position.X - 50, P2Position.Y)
+        Dim point5 As New Point(P2Position.X + 50, P2Position.Y)
         Dim point6 As New Point(P2Position.X, P2Position.Y + 25)
 
 
@@ -161,7 +161,7 @@
         End If
         If P2Up And
             P2Position.Y >= 5 Then
-            P2Position.Y += 5
+            P2Position.Y -= 5
         End If
     End Sub
 
