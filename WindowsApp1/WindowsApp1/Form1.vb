@@ -83,4 +83,10 @@
             End If
         End If
     End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        While True
+            draw.filltriangle(Brushes.)
+        End While
+    End Sub
 End Class
