@@ -45,7 +45,7 @@
         If e.KeyChar = "0" Then
             shooting = True
             If shooting = True Then
-                draw.DrawLine(bullet, 10, 10, 10, 10)
+                draw.DrawLine(bullet, 20000, 20000, 100, 100)
 
             End If
 
