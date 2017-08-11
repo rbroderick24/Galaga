@@ -64,7 +64,7 @@
         End If
     End Sub
 
-<<<<<<< HEAD
+
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Label1.Text = MousePosition.X
@@ -103,9 +103,6 @@
     'End Sub
 
 
-
-=======
->>>>>>> c6552ed5dc94b6b652cdbee1aef8270cdb92deca
     Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles Me.KeyUp
         If e.KeyCode = 65 Then
             P1Left = False
@@ -132,8 +129,7 @@
             P2Down = False
         End If
     End Sub
-<<<<<<< HEAD
-=======
+
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs)
         Dim point1 As New Point(P1Position.X - 50, 800)
@@ -147,5 +143,4 @@
         Label1.Text = MousePosition.X
         Label2.Text = MousePosition.Y
     End Sub
->>>>>>> c6552ed5dc94b6b652cdbee1aef8270cdb92deca
 End Class
