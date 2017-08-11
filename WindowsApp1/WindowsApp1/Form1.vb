@@ -91,7 +91,7 @@
         End If
     End Sub
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs)
         Dim point1 As New Point(P1Position.X - 50, 800)
         Dim point2 As New Point(P1Position.X + 50, 800)
         Dim point3 As New Point(P1Position.X, P1Position.Y - 25)

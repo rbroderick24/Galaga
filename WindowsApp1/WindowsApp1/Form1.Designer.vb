@@ -23,20 +23,11 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-<<<<<<< HEAD
-        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-=======
->>>>>>> d273d8540d22a29e5e1b17ce3ae27143fe629b23
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
-        'Timer1
-        '
-        Me.Timer1.Enabled = True
-        '
-<<<<<<< HEAD
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -55,31 +46,23 @@ Partial Class Form1
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Label2"
         '
-=======
->>>>>>> d273d8540d22a29e5e1b17ce3ae27143fe629b23
+        'Timer1
+        '
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-<<<<<<< HEAD
-        Me.ClientSize = New System.Drawing.Size(764, 811)
-=======
         Me.ClientSize = New System.Drawing.Size(1159, 451)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
->>>>>>> 21def598d18d957920d5ea2dda9ef0a1ee85b718
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Timer1 As Timer
-<<<<<<< HEAD
-    Friend WithEvents Timer2 As Timer
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-=======
->>>>>>> d273d8540d22a29e5e1b17ce3ae27143fe629b23
+    Friend WithEvents Timer1 As Timer
 End Class
