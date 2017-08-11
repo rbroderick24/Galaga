@@ -55,19 +55,6 @@
                 draw.DrawLine(bullet, 50, 100, 50, 50)
 
                 draw.DrawLine(bullet, 20000, 20000, 100, 100)
-<<<<<<< HEAD
-
-
-=======
-
-
-
-
-
-
-
-
->>>>>>> bbfdb51e05316c0ad89c2f6be807303556ccca79
 
                 If e.KeyCode = 32 Then
                     shooting = True
@@ -119,12 +106,7 @@
 
     'End Sub
 
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> bbfdb51e05316c0ad89c2f6be807303556ccca79
 
     Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles Me.KeyUp
         If e.KeyCode = 65 Then
@@ -152,8 +134,4 @@
             P2Down = False
         End If
     End Sub
-<<<<<<< HEAD
-=======
-
->>>>>>> bbfdb51e05316c0ad89c2f6be807303556ccca79
 End Class
