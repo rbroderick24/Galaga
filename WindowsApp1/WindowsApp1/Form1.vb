@@ -45,10 +45,8 @@
         If e.KeyCode = 17 Then
             shooting = True
             If shooting = True Then
-<<<<<<< HEAD
-                draw.DrawLine(bullet, 50, 100, 50, 50)
-=======
-                draw.DrawLine(bullet, 20000, 20000, 100, 100)
+
+                draw.DrawLine(bullet, 300, 100, 50, 50)
 
 
 
@@ -56,7 +54,9 @@
 
 
 
->>>>>>> d273d8540d22a29e5e1b17ce3ae27143fe629b23
+
+
+
 
                 If e.KeyCode = 32 Then
                     shooting = True
@@ -71,7 +71,7 @@
         End If
     End Sub
 
-<<<<<<< HEAD
+
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Label1.Text = MousePosition.X
         Label2.Text = MousePosition.Y
@@ -106,7 +106,7 @@
     'End If
 
     'End Sub
-=======
+
     Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles Me.KeyUp
         If e.KeyCode = 65 Then
             P1Left = False
@@ -133,5 +133,6 @@
             P2Down = False
         End If
     End Sub
->>>>>>> d273d8540d22a29e5e1b17ce3ae27143fe629b23
+
+
 End Class
