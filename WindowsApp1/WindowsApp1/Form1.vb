@@ -1,5 +1,5 @@
 ﻿Public Class Form1
-    Dim draw As System.Drawing.Graphics
+    Dim draw As System.Drawing.Graphics = Me.CreateGraphics
     Dim shooting As Boolean = False
     Dim bullet As New Pen(Color.Red, 3)
     Dim bullet2 As New Pen(Color.Blue, 3)
@@ -72,7 +72,7 @@
         If e.KeyChar = "0" Then
             shooting = True
             If shooting = True Then
-                draw.DrawLine(bullet, 10, 10, 10, 10)
+                draw.DrawLine(bullet, 20000, 20000, 100, 100)
 
                 If e.KeyChar = "Spacebar" Then
                     shooting = True
