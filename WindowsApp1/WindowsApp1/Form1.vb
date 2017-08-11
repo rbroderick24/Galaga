@@ -71,7 +71,7 @@
         If e.KeyCode = 17 Then
             shooting = True
             If shooting = True Then
-                draw.DrawLine(bullet, 100, 100, 60, 60)
+                draw.DrawLine(bullet, 50, 100, 50, 50)
 
                 If e.KeyCode = 32 Then
                     shooting = True
@@ -83,35 +83,39 @@
             End If
         End If
     End Sub
-<<<<<<< HEAD
 
-    Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles Me.KeyUp
-        'If e.KeyChar = "A" Then
-        '    P1Left = False
-        'End If
-        'If e.KeyChar = "D" Then
-        '    P1Right = False
-        'End If
-        'If e.KeyChar = "W" Then
-        '    P1Up = False
-        'End If
-        'If e.KeyChar = "S" Then
-        '    P1Down = False
-        'End If
-        'If e.KeyChar = "1" Then
-        '    P2Left = False
-        'End If
-        'If e.KeyChar = "3" Then
-        '    P2Right = False
-        'End If
-        'If e.KeyChar = "5" Then
-        '    P2Up = False
-        'End If
-        'If e.KeyChar = "2" Then
-        '    P2Down = False
-        'End If
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Label1.Text = MousePosition.X
+        Label2.Text = MousePosition.Y
 
     End Sub
-=======
->>>>>>> b6cb81cdbdcb2af264feb10118e50dfd97e5c5b2
+
+
+    'Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles Me.KeyUp
+    'If e.KeyChar = "A" Then
+    '    P1Left = False
+    'End If
+    'If e.KeyChar = "D" Then
+    '    P1Right = False
+    'End If
+    'If e.KeyChar = "W" Then
+    '    P1Up = False
+    'End If
+    'If e.KeyChar = "S" Then
+    '    P1Down = False
+    'End If
+    'If e.KeyChar = "1" Then
+    '    P2Left = False
+    'End If
+    'If e.KeyChar = "3" Then
+    '    P2Right = False
+    'End If
+    'If e.KeyChar = "5" Then
+    '    P2Up = False
+    'End If
+    'If e.KeyChar = "2" Then
+    '    P2Down = False
+    'End If
+
+    'End Sub
 End Class
