@@ -14,7 +14,6 @@
     Dim P1Position As New Point(390, 800)
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-
     End Sub
     Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles Me.KeyUp
         If e.KeyCode = 65 Then
@@ -44,37 +43,37 @@
     End Sub
 
     Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
-        If e.KeyChar = "A" Then
+        If e.KeyCode = 65 Then
             P1Left = True
         End If
-        If e.KeyChar = "D" Then
+        If e.KeyCode = 68 Then
             P1Right = True
         End If
-        If e.KeyChar = "W" Then
+        If e.KeyCode = 87 Then
             P1Up = True
         End If
-        If e.KeyChar = "S" Then
+        If e.KeyCode = 83 Then
             P1Down = True
         End If
-        If e.KeyChar = "1" Then
+        If e.KeyCode = 37 Then
             P2Left = True
         End If
-        If e.KeyChar = "3" Then
+        If e.KeyCode = 39 Then
             P2Right = True
         End If
-        If e.KeyChar = "5" Then
+        If e.KeyCode = 38 Then
             P2Up = True
         End If
-        If e.KeyChar = "2" Then
+        If e.KeyCode = 40 Then
             P2Down = True
         End If
 
-        If e.KeyChar = "0" Then
+        If e.KeyCode = 17 Then
             shooting = True
             If shooting = True Then
                 draw.DrawLine(bullet, 20000, 20000, 100, 100)
 
-                If e.KeyChar = "Spacebar" Then
+                If e.KeyCode = 32 Then
                     shooting = True
                     If shooting = True Then
                         draw.DrawLine(bullet2, 10, 10, 10, 10)
