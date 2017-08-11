@@ -13,9 +13,9 @@
     Dim P2Down As Boolean = False
     Dim P1Position As New Point(390, 800)
     Dim P2Position As New Point(390, 50)
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Dim P1Bullets() As Point = {New Point(0, 0), New Point(0, 0), New Point(0, 0)}
 
-    End Sub
+
     Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         Dim draw As System.Drawing.Graphics = Me.CreateGraphics
         If e.KeyCode = 65 Then
@@ -91,6 +91,9 @@
         If e.KeyCode = 40 Then
             P2Down = False
         End If
+        If e.KeyCode = 32 Then
+            shooting = False
+        End If
     End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Dim point1 As New Point(P1Position.X - 50, 800)
@@ -100,7 +103,7 @@
         Dim point5 As New Point(P2Position.X + 50, 50)
         Dim point6 As New Point(P2Position.X, P2Position.Y + 25)
 
-        Dim P1Bullets() As Point = {New Point(0, 0), New Point(0, 0), New Point(0, 0)}
+
 
         Dim draw As System.Drawing.Graphics = Me.CreateGraphics
         Dim allP As Point() = {point1, point2, point3}
@@ -112,19 +115,16 @@
         draw.FillPolygon(redBrush, allP)
         draw.FillPolygon(blueBrush, allP2)
 
-        If shooting Then
-            For i As Integer = 0 To P1Bullets.Length - 1
-                If P1Bullets(i) = New Point(0, 0) Then
-                    P1Bullets(i) = New Point(P1Position.X, P1Position.Y - 25)
-                End If
-            Next
-        End If
-
 
         For i As Integer = 0 To P1Bullets.Length - 1
+            P1Bullets(i).Y -= 10
             If P1Bullets(i) <> New Point(0, 0) Then
-                MsgBox("moving bullet")
-                P1Bullets(i).Y -= 10
+                If P1Bullets(i).Y <= 0 Then
+                    P1Bullets(i) = New Point(0, 0)
+
+                End If
+                Debug.WriteLine("{" & P1Bullets(0).ToString & "," & P1Bullets(1).ToString & ", " & P1Bullets(2).ToString & "}")
+
                 draw.FillRectangle(redBrush, P1Bullets(i).X, P1Bullets(i).Y, 5, 20)
             End If
         Next
@@ -162,6 +162,17 @@
         If P2Up And
             P2Position.Y >= 5 Then
             P2Position.Y += 5
+        End If
+    End Sub
+
+    Private Sub Form1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
+        If e.KeyChar = " " Then
+            For i As Integer = 0 To P1Bullets.Length - 1
+                If P1Bullets(i) = New Point(0, 0) Then
+                    P1Bullets(i) = New Point(P1Position.X, P1Position.Y - 25)
+                    Exit For
+                End If
+            Next
         End If
     End Sub
 End Class
