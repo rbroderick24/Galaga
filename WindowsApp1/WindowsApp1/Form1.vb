@@ -2,6 +2,7 @@
     Dim draw As System.Drawing.Graphics
     Dim shooting As Boolean = False
     Dim bullet As New Pen(Color.Red, 3)
+    Dim bullet2 As New Pen(Color.Blue, 3)
     Dim P1Left As Boolean = False
     Dim P1Right As Boolean = False
     Dim P1Up As Boolean = False
@@ -47,7 +48,22 @@
             If shooting = True Then
                 draw.DrawLine(bullet, 10, 10, 10, 10)
 
-            End If
+
+
+
+
+
+
+
+                If e.KeyChar = "Spacebar" Then
+                    shooting = True
+                    If shooting = True Then
+                        draw.DrawLine(bullet2, 10, 10, 10, 10)
+
+
+                    End If
+
+                End If
 
         End If
     End Sub
@@ -76,6 +92,5 @@
         End If
         If e.KeyChar = "2" Then
             P2Down = False
-        End If
     End Sub
 End Class
