@@ -57,7 +57,7 @@
             End If
         End If
 
-<<<<<<< HEAD
+
 
 
     'Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -99,7 +99,7 @@
 
 
 
-=======
+
         If e.KeyCode = 32 Then
             shooting = True
             If shooting = True Then
@@ -109,7 +109,7 @@
         End If
 
     End Sub
->>>>>>> 2c286ab030ab62e14b1811d18a59dfc333cffefa
+
     Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles Me.KeyUp
         If e.KeyCode = 65 Then
             P1Left = False
@@ -139,21 +139,21 @@
             shooting = False
         End If
     End Sub
-<<<<<<< HEAD
+
 
 
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs)
-=======
+
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-<<<<<<< HEAD
+
         Dim point1 As New Point(P1Position.X - 50, P1Position.Y)
         Dim point2 As New Point(P1Position.X + 50, P1Position.Y)
-=======
->>>>>>> 2c286ab030ab62e14b1811d18a59dfc333cffefa
+
+
         Dim point1 As New Point(P1Position.X - 50, 800)
         Dim point2 As New Point(P1Position.X + 50, 800)
->>>>>>> 107fe6e555312758db0d6d471af12018e3606458
+
         Dim point3 As New Point(P1Position.X, P1Position.Y - 25)
         Dim point4 As New Point(P2Position.X - 50, P2Position.Y)
         Dim point5 As New Point(P2Position.X + 50, P2Position.Y)
@@ -231,8 +231,8 @@
             Next
         End If
     End Sub
-<<<<<<< HEAD
 
-=======
->>>>>>> 2c286ab030ab62e14b1811d18a59dfc333cffefa
+
+
+
 End Class
